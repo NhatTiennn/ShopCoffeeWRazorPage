@@ -1,0 +1,17 @@
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\Repositories.deps.json
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\Repositories.dll
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\Repositories.pdb
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfoInputs.cache
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfo.cs
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.csproj.CoreCompileInputs.cache
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.dll
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\refint\Repositories.dll
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.pdb
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\ref\Repositories.dll
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\BusinessObject.dll
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\DataAccess.dll
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\BusinessObject.pdb
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\DataAccess.pdb
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.csproj.AssemblyReference.cache
+D:\PRN221\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.csproj.CopyComplete

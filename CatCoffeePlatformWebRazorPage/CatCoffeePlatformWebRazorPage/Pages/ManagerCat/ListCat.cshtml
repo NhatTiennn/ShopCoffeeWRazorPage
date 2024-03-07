@@ -1,0 +1,60 @@
+﻿@page
+@model CatCoffeePlatformWebRazorPage.Pages.ManagerCat.ListCat
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="./CreateCat">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat[0].CatName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat[0].ImageCat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat[0].ShopName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cat[0].CatTypeName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Cat) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CatName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageCat)
+            </td>
+            <td>
+                    <input type="checkbox" name="status" @(item.Status ? "checked" : "") />
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.ShopName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.CatTypeName)
+            </td>
+            <td>
+                <a asp-page="./EditCat" asp-route-id="@item.CatId">Edit</a> |
+                    <a asp-page="./DetailsCat" asp-route-id="@item.CatId">Details</a> |
+                    <a asp-page="./DeleteCat" asp-route-id="@item.CatId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
