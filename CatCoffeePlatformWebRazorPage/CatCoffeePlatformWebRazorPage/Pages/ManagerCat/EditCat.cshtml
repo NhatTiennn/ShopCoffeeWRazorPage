@@ -1,0 +1,55 @@
+﻿@page
+@model CatCoffeePlatformWebRazorPage.Pages.ManagerCat.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Cat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Cat.CatId" />
+            <div class="form-group">
+                <label asp-for="Cat.CatType" class="control-label">Type</label>
+                <select asp-for="Cat.CatTypeId" class="form-control" asp-items="ViewBag.CatTypeId" name="catTypeId" value="@Model.Cat.CatTypeId"></select>
+                <span asp-validation-for="Cat.CatTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cat.ShopId" class="control-label">Shop Name</label>
+                <select asp-for="Cat.ShopId" class="form-control" asp-items="ViewBag.ShopId" name="shopID" value="@Model.Cat.ShopId"></select>
+                <span asp-validation-for="Cat.ShopId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cat.CatName" class="control-label"></label>
+                <input asp-for="Cat.CatName" class="form-control" name="catName" value="@Model.Cat.CatName"/>
+                <span asp-validation-for="Cat.CatName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cat.ImageCat" class="control-label"></label>
+                <input asp-for="Cat.ImageCat" class="form-control" name="image" n/>
+                <span asp-validation-for="Cat.ImageCat" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Cat.Status" name="status"/> @Html.DisplayNameFor(model => model.Cat.Status)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./ListCat">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
