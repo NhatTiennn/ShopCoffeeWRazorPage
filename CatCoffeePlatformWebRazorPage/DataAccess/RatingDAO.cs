@@ -29,31 +29,54 @@ namespace DataAccess
             }
         }
 
-        public async Task<int> GetRatingAShop(int shopId)
+        public async Task<int> GetRatingAShop(int? shopId)
         {
             try
             {
-                var totalUserRate = await _context.Ratings.AsNoTracking().Where(a => a.ShopId == shopId)
+                int totalUserRate = await _context.Ratings.AsNoTracking().Where(a => a.ShopId == shopId)
                                             .Select(x => x.AccountId).Distinct().CountAsync();
                 var totalRateShop = await _context.Ratings.AsNoTracking().Where(a => a.ShopId == shopId)
                                             .Select(x => x.RateNumber).Distinct().SumAsync();
-                var average =totalRateShop/totalUserRate;
-                return average;
+                int average = 0;
+                if (totalUserRate == 0)
+                {
+                    average = totalRateShop / 1;
+
+                }
+                else if (totalUserRate == 1)
+                {
+                    average = totalRateShop / 1;
+                }
+                else
+                {
+                    average = totalRateShop / 5;
+                }
+                if (average > 0)
+                {
+                    return average;
+                }
+                else
+                {
+                    return 0;
+                }
             }
-            catch (Exception ex) { 
+            catch (Exception ex)
+            {
                 throw new Exception(ex.Message);
             }
         }
 
-        public async Task<int> GetRatingByUser(int accountId,int shopId)
+        public async Task<int> GetRatingByUser(int? accountId, int? shopId)
         {
             try
             {
-                var scoreShopOfUser = await _context.Ratings.AsNoTracking()
+                return await _context.Ratings.AsNoTracking()
                                         .Where(a => a.AccountId == accountId && a.ShopId == shopId)
                                         .Select(x => x.RateNumber).FirstOrDefaultAsync();
-                return scoreShopOfUser;
-            }catch (Exception ex) {
+
+            }
+            catch (Exception ex)
+            {
                 throw new Exception("Error");
             }
         }
@@ -63,19 +86,36 @@ namespace DataAccess
             try
             {
                 var checkUser = GetRatingByUser(request.AccountId, request.ShopId);
-                if(checkUser == null)
+                if (checkUser == null)
                 {
                     _context.Ratings.Add(request);
                     await _context.SaveChangesAsync();
-                }else
+                }
+                else
                 {
                     _context.Ratings.Update(request);
                     await _context.SaveChangesAsync();
                 }
                 return request;
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<int> GetRatingID(int? accountId, int? shopId)
+        {
+            try
+            {
+                return await _context.Ratings
+                    .Where(a => a.AccountId == accountId && a.ShopId == shopId)
+                    .Select(x => x.RateId)
+                    .FirstOrDefaultAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error");
             }
         }
     }

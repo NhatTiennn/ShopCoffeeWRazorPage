@@ -132,34 +132,77 @@
                         </div>
                         <div class="col-lg-6">
                             <h4 class="fw-bold mb-3">@Html.DisplayFor(model => model.ShopCoffeeCat.ShopName)</h4>
+                            @functions {
+                                public string DisplayStarRating(int rating)
+                                {
+                                    string stars = "";
+                                    for (int i = 1; i <= 5; i++)
+                                    {
+                                        string starClass = i <= rating ? "fas fa-star" : "far fa-star";
+                                        stars += $"<i class='{starClass}'></i>";
+                                    }
+                                    return stars;
+                                }
+                            }
+                            <div class="rating-section">
+                                <p>Shop Rating: <span id="shopRating">@Html.Raw(DisplayStarRating(Model.Rating))</span></p>
+                                <p>Your Rating: <span id="customerRating">@Html.Raw(DisplayStarRating(Model.CustomerRating))</span></p>
+                                <a href="#" id="editRatingLink" class="edit-link">Edit Rating</a>
+                            </div>
+
+                            <div id="ratingPopup">
+                                <!-- Popup để chỉnh sửa đánh giá -->
+                                <form method="post" asp-page-handler="EditRating" asp-route-id="@Model.ShopCoffeeCat.ShopId">
+                                    <select id="popupRating" class="form-control" name="CustomerRating">
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            <option value="@i">@Html.Raw(DisplayStarRating(i))</option>
+                                        }
+                                    </select>
+                                    <button type="submit">Save</button>
+                                    <button type="button" id="cancelRating">Cancel</button>
+                                </form>
+                            </div>
+                            <style>
+                                .star-option {
+                                    transition: color 0.3s;
+                                }
+
+                                    .star-option:hover {
+                                        color: gold;
+                                    }
+
+                                .edit-link.active {
+                                    display: none;
+                                }
+
+                                #ratingPopup {
+                                    display: none;
+                                }
+
+                                    #ratingPopup.active {
+                                        display: block;
+                                    }
+                            </style>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    var editRatingLink = document.getElementById('editRatingLink');
+                                    var ratingPopup = document.getElementById('ratingPopup');
+
+                                    editRatingLink.addEventListener('click', function () {
+                                        ratingPopup.classList.toggle('active');
+                                    });
+                                });
+                            </script>
+                                                 
+
+
                             <p class="mb-3">
                                 Address: @Html.DisplayFor(model => model.ShopCoffeeCat.Address)</br>
                                 Start Time: @Html.DisplayFor(model => model.ShopCoffeeCat.StartTime)
                                 End Time: @Html.DisplayFor(model => model.ShopCoffeeCat.EndTime)
                             </p>
-                            <!-- <h5 class="fw-bold mb-3"></h5>
-                            <div class="d-flex mb-4">
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <p class="mb-4">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
-                            <p class="mb-4">Susp endisse ultricies nisi vel quam suscipit. Sabertooth peacock flounder; chain pickerel hatchetfish, pencilfish snailfish</p> -->
-                            @* <div class="input-group quantity mb-5" style="width: 100px;">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-sm btn-minus rounded-circle bg-light border">
-                                        <i class="fa fa-minus"></i>
-                                    </button>
-                                </div>
-                                <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                        <i class="fa fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div> *@
+                           
                             @if (Model.customer != null)
                             {
                                 <a asp-page="Customer/BookingPage" asp-route-id="@Model.ShopCoffeeCat.ShopId" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Book now</a>
