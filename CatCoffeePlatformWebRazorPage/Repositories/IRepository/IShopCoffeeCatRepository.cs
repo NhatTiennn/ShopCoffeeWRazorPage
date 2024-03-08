@@ -22,7 +22,7 @@ namespace Repositories.IRepository
         ShopCoffeeCat GetById(int? id);
         List<ShopCoffeeCat> GetTop10Shops();
 
-
+        void CreateShopCoffee(ShopCoffeeCat request);
 
     }
 }

@@ -86,5 +86,10 @@ namespace DataAccess
             return top10Shops;
         }
 
+        public void CreateShopCoffee(ShopCoffeeCat request)
+        {
+            _context.ShopCoffeeCats.Add(request);
+            _context.SaveChanges();
+        }
     }
 }
