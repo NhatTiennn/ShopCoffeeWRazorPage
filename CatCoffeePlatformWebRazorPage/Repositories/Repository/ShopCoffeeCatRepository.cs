@@ -11,6 +11,11 @@ namespace Repositories.Repository
 {
     public class ShopCoffeeCatRepository : IShopCoffeeCatRepository
     {
+        public void CreateShopCoffee(ShopCoffeeCat request)
+        {
+            ShopCoffeeCatDAO.Instance.CreateShopCoffee(request);
+        }
+
         public List<ShopCoffeeCat> GetAll()
         {
             return ShopCoffeeCatDAO.Instance.GetAll();
