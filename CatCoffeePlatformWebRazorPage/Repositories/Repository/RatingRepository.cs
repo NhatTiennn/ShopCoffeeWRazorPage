@@ -11,14 +11,20 @@ namespace Repositories.Repository
 {
     public class RatingRepository : IRatingRepository
     {
-        public async Task<int> GetRatingAShop(int shopId)
+        public async Task<int> GetRatingAShop(int? shopId)
         {
             return await RatingDAO.Instance.GetRatingAShop(shopId);
         }
 
-        public async Task<int> GetRatingByUser(int accountId, int shopId)
+
+        public async Task<int> GetRatingByUser(int? accountId, int? shopId)
         {
             return await RatingDAO.Instance.GetRatingByUser(accountId, shopId);
+        }
+
+        public async Task<int> GetRatingID(int? accountId, int? shopId)
+        {
+            return await RatingDAO.Instance.GetRatingID(accountId, shopId);
         }
 
         public async Task<Rating> RatingByUser(Rating request)

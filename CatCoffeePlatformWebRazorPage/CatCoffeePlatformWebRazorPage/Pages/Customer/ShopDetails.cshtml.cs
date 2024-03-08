@@ -14,13 +14,15 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
 {
     public class ShopDetailsModel : PageModel
     {
+        private readonly IRatingRepository ratingRepository;
         private readonly IShopCoffeeCatRepository shopCoffeeCatRepository;
         private readonly ICatTypeRepository catTypeRepository;
         private readonly IAccountRepository accountRepository;
         private readonly IHttpContextAccessor httpContextAccessor;
 
-        public ShopDetailsModel(IShopCoffeeCatRepository shopCoffeeCatRepository, IAccountRepository accountRepository, ICatTypeRepository catTypeRepository, IHttpContextAccessor httpContextAccessor)
+        public ShopDetailsModel(IRatingRepository ratingRepository, IShopCoffeeCatRepository shopCoffeeCatRepository, IAccountRepository accountRepository, ICatTypeRepository catTypeRepository, IHttpContextAccessor httpContextAccessor)
         {
+            this.ratingRepository = ratingRepository;
             this.shopCoffeeCatRepository = shopCoffeeCatRepository;
             this.catTypeRepository = catTypeRepository;
             this.accountRepository = accountRepository;
@@ -47,6 +49,10 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
 
         public Account customer { get; set; }
 
+        public int Rating {  get; set; }
+        public Rating Rate { get; set; }
+
+
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -63,6 +69,9 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
             var cat = shopCoffeeCatRepository.GetCatByShopId((int)id);
             var catT = catTypeRepository.GetAll();
             var top10Shops = shopCoffeeCatRepository.GetTop10Shops();
+            Rating = await ratingRepository.GetRatingAShop(shopcoffeecat.ShopId);
+            CustomerRating = await ratingRepository.GetRatingByUser((int)accountId, (int)id);
+
             if (shopcoffeecat == null)
             {
                 return NotFound();
@@ -77,6 +86,43 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
                 Top10Shop = top10Shops;
             }
             return Page();
+        }
+        [BindProperty(SupportsGet = true)]
+        public int CustomerRating { get; set; }
+
+        public async Task<IActionResult> OnPostAsync(int? id)
+        {
+            try
+            {
+                var shopcoffeecat = shopCoffeeCatRepository.GetById(id);
+                int? accountId = httpContextAccessor.HttpContext.Session.GetInt32("AccountId");
+                Rating newRating = new Rating
+                {
+                    RateId = await ratingRepository.GetRatingID((int)accountId, (int)id),
+                    AccountId = (int)accountId,
+                    ShopId = (int)id,
+                    RateNumber = CustomerRating
+                };
+                Rate = await ratingRepository.RatingByUser(newRating);
+                Rating = await ratingRepository.GetRatingAShop(Rate.ShopId);
+                var drink = shopCoffeeCatRepository.GetDrinkByShopId((int)id);
+                var fdCat = shopCoffeeCatRepository.GetFoodForCatByShopId((int)id);
+                var cat = shopCoffeeCatRepository.GetCatByShopId((int)id);
+                var catT = catTypeRepository.GetAll();
+                var top10Shops = shopCoffeeCatRepository.GetTop10Shops();
+                CustomerRating = await ratingRepository.GetRatingByUser((int)accountId,(int)id);
+                ShopCoffeeCat = shopcoffeecat;
+                Drinks = drink;
+                Cats = cat;
+                FoodForCats = fdCat;
+                CatTypes = catT;
+                Top10Shop = top10Shops;
+                return Page();
+            }
+            catch (Exception ex)
+            {
+                return Page();
+            }
         }
     }
 }

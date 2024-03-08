@@ -9,8 +9,10 @@ namespace Repositories.IRepository
 {
     public interface IRatingRepository
     {
-        Task<int> GetRatingAShop(int shopId);
-        Task<int> GetRatingByUser(int accountId, int shopId);
+        Task<int> GetRatingAShop(int? shopId);
+        Task<int> GetRatingByUser(int? accountId, int? shopId);
+        Task<int> GetRatingID(int? accountId, int? shopId);
+
         Task<Rating> RatingByUser(Rating request);
     }
 }
