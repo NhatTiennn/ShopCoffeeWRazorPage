@@ -11,7 +11,7 @@ namespace Repositories.IRepository
     public interface IBookingRepository
     {
         public List<BookingInformation> GetAll();
-        public List<Booking> GetByAccountId(int accountId);
+        public List<Booking> GetByAccountId(int? accountId);
         public void Create(Booking booking);
         public Boolean checkSlot(Booking booking);
         public void Update(Booking newBooking);

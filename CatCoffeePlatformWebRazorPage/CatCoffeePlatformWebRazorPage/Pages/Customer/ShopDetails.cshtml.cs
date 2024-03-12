@@ -19,15 +19,18 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
         private readonly ICatTypeRepository catTypeRepository;
         private readonly IAccountRepository accountRepository;
         private readonly IHttpContextAccessor httpContextAccessor;
+        private readonly IBookingRepository bookingRepository;
 
-        public ShopDetailsModel(IRatingRepository ratingRepository, IShopCoffeeCatRepository shopCoffeeCatRepository, IAccountRepository accountRepository, ICatTypeRepository catTypeRepository, IHttpContextAccessor httpContextAccessor)
+        public ShopDetailsModel(IBookingRepository bookingRepository, IRatingRepository ratingRepository, IShopCoffeeCatRepository shopCoffeeCatRepository, IAccountRepository accountRepository, ICatTypeRepository catTypeRepository, IHttpContextAccessor httpContextAccessor)
         {
             this.ratingRepository = ratingRepository;
             this.shopCoffeeCatRepository = shopCoffeeCatRepository;
             this.catTypeRepository = catTypeRepository;
             this.accountRepository = accountRepository;
             this.httpContextAccessor = httpContextAccessor;
+            this.bookingRepository = bookingRepository;
             customer = new Account();
+            ShopCoffeeCat = new ShopCoffeeCat();
 
         }
 
@@ -52,7 +55,7 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
         public int Rating {  get; set; }
         public Rating Rate { get; set; }
 
-
+        public  List<Booking> Booking { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -60,69 +63,98 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
             customer = accountRepository.GetById(accountId);
             if (id == null)
             {
-                return NotFound();
+                return Page();
             }
-
-            var shopcoffeecat = shopCoffeeCatRepository.GetById(id);
-            var drink = shopCoffeeCatRepository.GetDrinkByShopId((int)id);
-            var fdCat = shopCoffeeCatRepository.GetFoodForCatByShopId((int)id);
-            var cat = shopCoffeeCatRepository.GetCatByShopId((int)id);
-            var catT = catTypeRepository.GetAll();
-            var top10Shops = shopCoffeeCatRepository.GetTop10Shops();
-            Rating = await ratingRepository.GetRatingAShop(shopcoffeecat.ShopId);
-            CustomerRating = await ratingRepository.GetRatingByUser((int)accountId, (int)id);
-
-            if (shopcoffeecat == null)
+            if (customer == null)
             {
-                return NotFound();
+                var shopcoffeecat = shopCoffeeCatRepository.GetById(id);
+                var drink = shopCoffeeCatRepository.GetDrinkByShopId((int)id);
+                var fdCat = shopCoffeeCatRepository.GetFoodForCatByShopId((int)id);
+                var cat = shopCoffeeCatRepository.GetCatByShopId((int)id);
+                var catT = catTypeRepository.GetAll();
+                var top10Shops = shopCoffeeCatRepository.GetTop10Shops();
+                Rating = await ratingRepository.GetRatingAShop(shopcoffeecat.ShopId);
+                if (shopcoffeecat == null)
+                {
+                    return Page();
+                }
+                else
+                {
+                    ShopCoffeeCat = shopcoffeecat;
+                    Drinks = drink;
+                    Cats = cat;
+                    FoodForCats = fdCat;
+                    CatTypes = catT;
+                    Top10Shop = top10Shops;
+                    return Page();
+
+                }
             }
-            else 
-            {
-                ShopCoffeeCat = shopcoffeecat;
-                Drinks = drink;
-                Cats = cat;
-                FoodForCats = fdCat;
-                CatTypes = catT;
-                Top10Shop = top10Shops;
+            else{
+                var shopcoffeecat = shopCoffeeCatRepository.GetById(id);
+                var drink = shopCoffeeCatRepository.GetDrinkByShopId((int)id);
+                var fdCat = shopCoffeeCatRepository.GetFoodForCatByShopId((int)id);
+                var cat = shopCoffeeCatRepository.GetCatByShopId((int)id);
+                var catT = catTypeRepository.GetAll();
+                var top10Shops = shopCoffeeCatRepository.GetTop10Shops();
+                Rating = await ratingRepository.GetRatingAShop((int)id);
+                CustomerRating = await ratingRepository.GetRatingByUser((int)accountId, (int)id);
+                Booking = bookingRepository.GetByAccountId(accountId);
+                if (shopcoffeecat == null)
+                {
+                    return Page();
+                }
+                else
+                {
+                    ShopCoffeeCat = shopcoffeecat;
+                    Drinks = drink;
+                    Cats = cat;
+                    FoodForCats = fdCat;
+                    CatTypes = catT;
+                    Top10Shop = top10Shops;
+                    return Page();
+
+                }
             }
-            return Page();
         }
         [BindProperty(SupportsGet = true)]
         public int CustomerRating { get; set; }
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            try
-            {
+            
                 var shopcoffeecat = shopCoffeeCatRepository.GetById(id);
                 int? accountId = httpContextAccessor.HttpContext.Session.GetInt32("AccountId");
-                Rating newRating = new Rating
+                customer = accountRepository.GetById(accountId);
+                if (customer == null)
                 {
-                    RateId = await ratingRepository.GetRatingID((int)accountId, (int)id),
-                    AccountId = (int)accountId,
-                    ShopId = (int)id,
-                    RateNumber = CustomerRating
-                };
-                Rate = await ratingRepository.RatingByUser(newRating);
-                Rating = await ratingRepository.GetRatingAShop(Rate.ShopId);
-                var drink = shopCoffeeCatRepository.GetDrinkByShopId((int)id);
-                var fdCat = shopCoffeeCatRepository.GetFoodForCatByShopId((int)id);
-                var cat = shopCoffeeCatRepository.GetCatByShopId((int)id);
-                var catT = catTypeRepository.GetAll();
-                var top10Shops = shopCoffeeCatRepository.GetTop10Shops();
-                CustomerRating = await ratingRepository.GetRatingByUser((int)accountId,(int)id);
+                    return Page();
+                }
+                else
+                {
+                    Rating newRating = new Rating
+                    {
+                        RateId = await ratingRepository.GetRatingID((int)accountId, (int)id),
+                        AccountId = (int)accountId,
+                        ShopId = (int)id,
+                        RateNumber = CustomerRating
+                    };
+                    Rate = await ratingRepository.RatingByUser(newRating);
+                    var drink = shopCoffeeCatRepository.GetDrinkByShopId((int)id);
+                    var fdCat = shopCoffeeCatRepository.GetFoodForCatByShopId((int)id);
+                    var cat = shopCoffeeCatRepository.GetCatByShopId((int)id);
+                    var catT = catTypeRepository.GetAll();
+                    var top10Shops = shopCoffeeCatRepository.GetTop10Shops();
+                    CustomerRating = await ratingRepository.GetRatingByUser((int)accountId, (int)id);
+                Rating = await ratingRepository.GetRatingAShop((int)id);
                 ShopCoffeeCat = shopcoffeecat;
-                Drinks = drink;
-                Cats = cat;
-                FoodForCats = fdCat;
-                CatTypes = catT;
-                Top10Shop = top10Shops;
-                return Page();
-            }
-            catch (Exception ex)
-            {
-                return Page();
-            }
+                    Drinks = drink;
+                    Cats = cat;
+                    FoodForCats = fdCat;
+                    CatTypes = catT;
+                    Top10Shop = top10Shops;
+                    return Page();
+                }
         }
     }
 }
