@@ -59,11 +59,11 @@ namespace DataAccess
 
         public List<Cat> GetCatByShopId(int id)
         {
-            var cats = _context.ShopCoffeeCats
-         .Where(s => s.ShopId == id)
-         .SelectMany(s => s.Cats)
-         .Include(c => c.CatType)
-         .ToList();
+            var cats = (from shop in _context.ShopCoffeeCats
+                        join cat in _context.Cats on shop.ShopId equals cat.ShopId
+                        join catType in _context.CatTypes on cat.CatTypeId equals catType.CatTypeId
+                        where shop.ShopId == id
+                        select cat).ToList();
 
             return cats;
         }

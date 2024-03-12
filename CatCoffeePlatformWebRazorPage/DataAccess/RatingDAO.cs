@@ -70,10 +70,10 @@ namespace DataAccess
         {
             try
             {
-                return await _context.Ratings.AsNoTracking()
+                int score =  await _context.Ratings.AsNoTracking()
                                         .Where(a => a.AccountId == accountId && a.ShopId == shopId)
                                         .Select(x => x.RateNumber).FirstOrDefaultAsync();
-
+                return score;
             }
             catch (Exception ex)
             {

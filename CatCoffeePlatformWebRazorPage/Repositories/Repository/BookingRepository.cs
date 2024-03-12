@@ -27,7 +27,7 @@ namespace Repositories.Repository
            return BookingDAO.Instance.GetAll();
         }
 
-        public List<Booking> GetByAccountId(int accountId)
+        public List<Booking> GetByAccountId(int? accountId)
         {
             return BookingDAO.Instance.GetByAccountId(accountId);
         }

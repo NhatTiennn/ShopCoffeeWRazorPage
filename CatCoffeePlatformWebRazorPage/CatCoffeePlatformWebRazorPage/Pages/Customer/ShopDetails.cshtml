@@ -131,73 +131,103 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <h4 class="fw-bold mb-3">@Html.DisplayFor(model => model.ShopCoffeeCat.ShopName)</h4>
-                            @functions {
-                                public string DisplayStarRating(int rating)
+                        @functions {
+                            public string DisplayStarRating(int rating, bool isEditable)
+                            {
+                                string stars = "";
+                                for (int i = 1; i <= 5; i++)
                                 {
-                                    string stars = "";
-                                    for (int i = 1; i <= 5; i++)
+                                    string starClass = i <= rating ? "fas fa-star" : "far fa-star";
+                                    if (isEditable)
                                     {
-                                        string starClass = i <= rating ? "fas fa-star" : "far fa-star";
+                                        stars += $"<button type='button' class='{starClass} editable-star' data-rating='{i}'></button>";
+                                    }
+                                    else
+                                    {
                                         stars += $"<i class='{starClass}'></i>";
                                     }
-                                    return stars;
                                 }
+                                return stars;
                             }
-                            <div class="rating-section">
-                                <p>Shop Rating: <span id="shopRating">@Html.Raw(DisplayStarRating(Model.Rating))</span></p>
-                                <p>Your Rating: <span id="customerRating">@Html.Raw(DisplayStarRating(Model.CustomerRating))</span></p>
-                                <a href="#" id="editRatingLink" class="edit-link">Edit Rating</a>
-                            </div>
+                        }
+                        <div class="rating-section">
+                            <p>Shop Rating: <span id="shopRating">@Html.Raw(DisplayStarRating(Model.Rating,true))</span></p>
+                            <p>Your Rating: <span id="customerRating" class="editable">@Html.Raw(DisplayStarRating(Model.CustomerRating, true))</span></p>
+                                @if (Model.customer != null)
+                                {
+                                    <a href="#" id="editRatingLink" class="edit-link">Edit Rating</a>
 
-                            <div id="ratingPopup">
-                                <!-- Popup để chỉnh sửa đánh giá -->
-                                <form method="post" asp-page-handler="EditRating" asp-route-id="@Model.ShopCoffeeCat.ShopId">
-                                    <select id="popupRating" class="form-control" name="CustomerRating">
-                                        @for (int i = 1; i <= 5; i++)
-                                        {
-                                            <option value="@i">@Html.Raw(DisplayStarRating(i))</option>
-                                        }
-                                    </select>
-                                    <button type="submit">Save</button>
-                                    <button type="button" id="cancelRating">Cancel</button>
-                                </form>
+                                }
                             </div>
+                           <div id="ratingPopup">
+                                @if (Model.customer != null)
+                                {
+                            <form method="post" asp-page-handler="EditRating" asp-route-id="@Model.ShopCoffeeCat.ShopId">
+                                <div class="star-rating" id="popupRating">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        <button type="button" class="star" data-rating="@i"><i class="fas fa-star"></i></button>
+                                    }
+                                </div>
+                                <input type="hidden" id="selectedRating" name="CustomerRating" value="0" />
+                                <button type="submit">Save</button>
+                                <button type="button" id="cancelRating">Cancel</button>
+                            </form>
+                            }
                             <style>
-                                .star-option {
-                                    transition: color 0.3s;
+                                .star-rating {
+                                    display: flex;
                                 }
 
-                                    .star-option:hover {
+                                .star {
+                                    border: none;
+                                    background: none;
+                                    cursor: pointer;
+                                    padding: 0;
+                                    margin: 0;
+                                }
+
+                                .fa-star {
+                                    font-size: 24px;
+                                    color: gray;
+                                }
+
+                                    .fa-star.checked {
                                         color: gold;
                                     }
-
-                                .edit-link.active {
-                                    display: none;
-                                }
-
-                                #ratingPopup {
-                                    display: none;
-                                }
-
-                                    #ratingPopup.active {
-                                        display: block;
-                                    }
                             </style>
+
                             <script>
                                 document.addEventListener('DOMContentLoaded', function () {
-                                    var editRatingLink = document.getElementById('editRatingLink');
-                                    var ratingPopup = document.getElementById('ratingPopup');
+                                    var starButtons = document.querySelectorAll('#popupRating button');
+                                    var selectedRatingInput = document.getElementById('selectedRating');
 
-                                    editRatingLink.addEventListener('click', function () {
-                                        ratingPopup.classList.toggle('active');
+                                    starButtons.forEach(function (button) {
+                                        button.addEventListener('click', function () {
+                                            var rating = button.getAttribute('data-rating');
+                                            setRating(rating);
+                                        });
                                     });
+
+                                    function setRating(rating) {
+                                        selectedRatingInput.value = rating;
+
+                                        starButtons.forEach(function (button) {
+                                            button.querySelector('i').classList.remove('checked');
+                                        });
+
+                                        for (var i = 1; i <= rating; i++) {
+                                            var starButton = document.querySelector('#popupRating button[data-rating="' + i + '"]');
+                                            starButton.querySelector('i').classList.add('checked');
+                                        }
+                                    }
                                 });
                             </script>
-                                                 
+                        </div>
 
 
-                            <p class="mb-3">
+                        </div>
+                        <p class="mb-3">
                                 Address: @Html.DisplayFor(model => model.ShopCoffeeCat.Address)</br>
                                 Start Time: @Html.DisplayFor(model => model.ShopCoffeeCat.StartTime)
                                 End Time: @Html.DisplayFor(model => model.ShopCoffeeCat.EndTime)
@@ -210,7 +240,7 @@
                             else{
                                 <a asp-page="/LoginPage/Login" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i class="fa fa-sign-in-alt me-2 text-primary"></i> Login to book</a>
                                 }
-                            </div>
+                    </div>
                         <div class="col-lg-12">
                             <nav>
                                 <div class="nav nav-tabs mb-3">

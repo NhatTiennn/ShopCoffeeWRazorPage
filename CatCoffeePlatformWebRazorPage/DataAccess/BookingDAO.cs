@@ -70,7 +70,7 @@ namespace DataAccess
             _context.SaveChanges();
         }
 
-        public List<Booking> GetByAccountId(int accountId)
+        public List<Booking> GetByAccountId(int? accountId)
         {
             return _context.Bookings.Where(p => p.AccountId == accountId).ToList();
         }
