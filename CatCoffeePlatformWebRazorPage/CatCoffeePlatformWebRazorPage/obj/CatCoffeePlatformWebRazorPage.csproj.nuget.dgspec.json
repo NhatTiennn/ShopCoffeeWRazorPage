@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj": {}
+    "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj": {}
   },
   "projects": {
-    "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\obj\\",
+        "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
+        "outputPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\phamt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,25 +87,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj": {
+    "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj",
+        "projectUniqueName": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj",
         "projectName": "CatCoffeePlatformWebRazorPage",
-        "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj",
-        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\obj\\",
+        "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj",
+        "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
+        "outputPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\phamt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -123,14 +115,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
+              "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
               },
-              "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj"
+              "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj"
               },
-              "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj"
+              "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -203,25 +195,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
+    "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\obj\\",
+        "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
+        "outputPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\phamt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -235,8 +223,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
+              "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -266,25 +254,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj": {
+    "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\obj\\",
+        "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
+        "outputPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\phamt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -298,11 +282,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
+              "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
               },
-              "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\PRN221\\GroupProjectCatCoffee\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj"
+              "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -332,7 +316,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
