@@ -10582,19 +10582,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\phamt\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
-      "outputPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\phamt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10608,8 +10608,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
+            "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
             }
           }
         }
@@ -10639,7 +10639,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

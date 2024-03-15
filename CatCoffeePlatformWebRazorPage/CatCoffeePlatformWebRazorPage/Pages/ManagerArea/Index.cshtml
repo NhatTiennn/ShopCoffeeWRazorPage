@@ -1,0 +1,54 @@
+﻿@page
+@model CatCoffeePlatformWebRazorPage.Pages.ManagerArea.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Area[0].AreaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Area[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Area[0].Account)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Area[0].ShopName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Area) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShopName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AreaId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AreaId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AreaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
