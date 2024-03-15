@@ -1,4 +1,5 @@
-﻿using BusinessObject.Models;
+﻿using BusinessObject.DTO;
+using BusinessObject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +10,19 @@ namespace Repositories.IRepository
 {
     public interface IAreaRepository
     {
-        public Area GetByAccountId(int accountId);
-        public List<Area> GetAll();
-        public Area GetById(int id);
-        public Area GetByName(string name);
+        Task<Area> GetByAccountId(int accountId);
+        //Area GetByAccountId(int accountId);
+        Task<IList<Area>> GetAll();
+        Task<Area> GetById(int? id);
+        Task<IList<Area>> SearchAreaByName(string name);
         public List<Area> GetByShopId(int id);
-        public void Update(Area area);
-        public void DeleteById(int id);
-        public void Create(Area area);
+        Task<Area> Update(Area area);
+        Task<Area> DeleteById(int? id);
+        Task<Area> Create(Area area);
+
+        Task<IList<AreaInformation>> AreaInformation();
+
+        Task<AreaInformation> GetAreaInforById(int? id);
+        Task<bool> IsAreaNameExist(string areaName, int shopId, int areaId);
     }
 }

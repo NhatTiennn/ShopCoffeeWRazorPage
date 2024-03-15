@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BusinessObject.Models
 {
@@ -12,8 +13,13 @@ namespace BusinessObject.Models
         }
 
         public int AreaId { get; set; }
+
+        [Required(ErrorMessage = "AreaName is required.")]
+        [StringLength(100, ErrorMessage = "AreaName must be at most 100 characters long.")]
         public string AreaName { get; set; } = null!;
+        [Required(ErrorMessage = "Shop is required.")]
         public int ShopId { get; set; }
+        [Required(ErrorMessage = "Account is required.")]
         public int AccountId { get; set; }
         public bool Status { get; set; }
 

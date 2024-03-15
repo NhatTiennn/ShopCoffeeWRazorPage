@@ -60,3 +60,18 @@ D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\
 D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll

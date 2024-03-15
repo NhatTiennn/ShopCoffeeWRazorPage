@@ -1,4 +1,5 @@
-﻿using BusinessObject.Models;
+﻿using BusinessObject.DTO;
+using BusinessObject.Models;
 using DataAccess;
 using Repositories.IRepository;
 using System;
@@ -11,43 +12,60 @@ namespace Repositories.Repository
 {
     public class AreaRepository : IAreaRepository
     {
-        public void Create(Area area)
+        public async Task<Area> Create(Area area)
         {
-            AreaDAO.Instance.Create(area);
+            return await AreaDAO.Instance.Create(area);
         }
 
-        public void DeleteById(int id)
+        public async Task<Area> DeleteById(int? id)
         {
-            AreaDAO.Instance.DeleteById(id);
+            return await AreaDAO.Instance.DeleteById(id);
         }
 
-        public List<Area> GetAll()
+        public async Task<IList<Area>> GetAll()
         {
-            return AreaDAO.Instance.GetAll();
+            return await AreaDAO.Instance.GetAll();
         }
 
         public List<Area> GetByShopId(int id)
         { 
             return AreaDAO.Instance.GetByShopId(id);
         }
-        public Area GetByAccountId(int accountId)
+        public async Task<Area> GetByAccountId(int accountId)
+        //public Area GetByAccountId(int accountId)
         {
-            return AreaDAO.Instance.GetByAccountId(accountId);
+            return await AreaDAO.Instance.GetShopIdByAccountId(accountId);
+            //return  AreaDAO.Instance.GetByAccountId(accountId);
         }
 
-        public Area GetById(int id)
+        public async Task<Area> GetById(int? id)
         {
-            return AreaDAO.Instance.GetById(id);
+            return await AreaDAO.Instance.GetById(id);
         }
 
-        public Area GetByName(string name)
+        public async Task<IList<Area>> SearchAreaByName(string name)
         {
-            return AreaDAO.Instance.GetByName(name);
+            return await AreaDAO.Instance.SearchAreaByName(name);
         }
 
-        public void Update(Area area)
+        public async Task<Area> Update(Area area)
         {
-            AreaDAO.Instance.Update(area);    
+            return await AreaDAO.Instance.Update(area);    
+        }
+
+        public async Task<IList<AreaInformation>> AreaInformation()
+        {
+            return await AreaDAO.Instance.AreaInformation();
+        }
+
+        public async Task<AreaInformation> GetAreaInforById(int? id)
+        {
+            return await AreaDAO.Instance.GetAreaInforById(id);
+        }
+
+        public async Task<bool> IsAreaNameExist(string areaName, int shopId, int areaId)
+        {
+            return await AreaDAO.Instance.IsAreaNameExist(areaName,  shopId,  areaId);
         }
     }
 }
