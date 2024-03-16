@@ -9,11 +9,13 @@ using BusinessObject.Models;
 using Repositories.IRepository;
 using Microsoft.AspNetCore.Http;
 using Repositories.Repository;
+using BusinessObject.DTO;
 
 namespace CatCoffeePlatformWebRazorPage.Pages.Customer
 {
     public class ShopDetailsModel : PageModel
     {
+        private readonly ICommentRepository commentRepository;
         private readonly IRatingRepository ratingRepository;
         private readonly IShopCoffeeCatRepository shopCoffeeCatRepository;
         private readonly ICatTypeRepository catTypeRepository;
@@ -21,8 +23,11 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
         private readonly IHttpContextAccessor httpContextAccessor;
         private readonly IBookingRepository bookingRepository;
 
-        public ShopDetailsModel(IBookingRepository bookingRepository, IRatingRepository ratingRepository, IShopCoffeeCatRepository shopCoffeeCatRepository, IAccountRepository accountRepository, ICatTypeRepository catTypeRepository, IHttpContextAccessor httpContextAccessor)
+        public ShopDetailsModel(IBookingRepository bookingRepository, IRatingRepository ratingRepository, IShopCoffeeCatRepository shopCoffeeCatRepository,
+            IAccountRepository accountRepository, ICatTypeRepository catTypeRepository,
+            ICommentRepository commentRepository,IHttpContextAccessor httpContextAccessor)
         {
+            this.commentRepository = commentRepository;
             this.ratingRepository = ratingRepository;
             this.shopCoffeeCatRepository = shopCoffeeCatRepository;
             this.catTypeRepository = catTypeRepository;
@@ -54,13 +59,15 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
 
         public int Rating {  get; set; }
         public Rating Rate { get; set; }
+        public IList<CommentInformation> Comment { get; set; }
 
-        public  List<Booking> Booking { get; set; }
+
+        public List<Booking> Booking { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             int? accountId = httpContextAccessor.HttpContext.Session.GetInt32("AccountId");
-            customer = accountRepository.GetById(accountId);
+            customer = await accountRepository.GetById(accountId);
             if (id == null)
             {
                 return Page();
@@ -74,6 +81,7 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
                 var catT = catTypeRepository.GetAll();
                 var top10Shops = shopCoffeeCatRepository.GetTop10Shops();
                 Rating = await ratingRepository.GetRatingAShop(shopcoffeecat.ShopId);
+                Comment = await commentRepository.GetAllCommentOItem(shopcoffeecat.ShopId);
                 if (shopcoffeecat == null)
                 {
                     return Page();
@@ -99,6 +107,7 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
                 var top10Shops = shopCoffeeCatRepository.GetTop10Shops();
                 Rating = await ratingRepository.GetRatingAShop((int)id);
                 CustomerRating = await ratingRepository.GetRatingByUser((int)accountId, (int)id);
+                Comment = await commentRepository.GetAllCommentOItem(shopcoffeecat.ShopId);
                 Booking = bookingRepository.GetByAccountId(accountId);
                 if (shopcoffeecat == null)
                 {
@@ -125,7 +134,7 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
             
                 var shopcoffeecat = shopCoffeeCatRepository.GetById(id);
                 int? accountId = httpContextAccessor.HttpContext.Session.GetInt32("AccountId");
-                customer = accountRepository.GetById(accountId);
+                customer = await accountRepository.GetById(accountId);
                 if (customer == null)
                 {
                     return Page();
@@ -153,7 +162,7 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
                     FoodForCats = fdCat;
                     CatTypes = catT;
                     Top10Shop = top10Shops;
-                    return Page();
+                return Redirect("/Customer/ShopDetails?id=" + id);
                 }
         }
     }

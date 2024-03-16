@@ -10,7 +10,10 @@ namespace Repositories.IRepository
     public interface ITableRepository
     {
         public Table GetById(int tableId);
+        public List<Table> GetByShopId(int shopId);
         List<Table> GetTableByShopId(int shopId);
+        public Table GetByTableName(string tableName, int shopId);
+
 
     }
 }

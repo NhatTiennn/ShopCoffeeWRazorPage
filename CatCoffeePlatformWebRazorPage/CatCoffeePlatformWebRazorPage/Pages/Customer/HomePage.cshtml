@@ -51,10 +51,8 @@
                     <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
                 </div>
                 <div class="top-link pe-2">
-                    <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                    <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
-                    <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
-                </div>
+@*                     <a asp-page="/Customer/BookingHistory" class="text-white"><small class="text-white mx-2">Booking History</small>/</a>
+ *@                </div>
             </div>
         </div>
         <div class="container px-0">
@@ -65,21 +63,26 @@
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
-                        <a asp-page="./HomePage" class="nav-item nav-link active">Home</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="d-flex m-3 me-0">
                         <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
-                          @if (Model.customer != null)
-                    {
-                        <a asp-page="./HomePage" class="my-auto">
-                            <i class="fas fa-user fa-2x"></i>
-                        </a>
-                    }else{
-                        <a asp-page="/LoginPage/Login" class="my-auto">
-                            <i class="fas fa-sign-in-alt fa-2x"></i>
-                        </a>
-                    }
+                        @if (Model.customer != null)
+                        {
+                            <div class="nav-item dropdown">
+                                <a href="#" class="my-auto nav-link dropdown-toggle active" data-bs-toggle="dropdown"> <i class="fas fa-user fa-2x"></i></a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                    <a asp-page="/Customer/BookingHistory" class="dropdown-item active">History Booking</a>
+                                    <a asp-page="/Customer/MyProfile" asp-route-id="@Model.customer.AccountId" class="dropdown-item">My Profile</a>
+                                    <a asp-page="/Customer/MyProfile" asp-route-id="@Model.customer.AccountId" class="dropdown-item">LogOut</a>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <a asp-page="/LoginPage/Login" class="my-auto">
+                                <i class="fas fa-sign-in-alt fa-2x"></i>
+                            </a>
+                        }
                     </div>
                 </div>
             </nav>

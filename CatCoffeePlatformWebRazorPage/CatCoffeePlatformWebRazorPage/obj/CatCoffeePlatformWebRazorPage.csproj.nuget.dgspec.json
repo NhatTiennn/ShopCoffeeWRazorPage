@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj": {}
+    "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\obj\\",
+        "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,21 +91,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj": {
+    "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj",
+        "projectUniqueName": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj",
         "projectName": "CatCoffeePlatformWebRazorPage",
-        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\obj\\",
+        "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage.csproj",
+        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,14 +123,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
+              "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
               },
-              "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj"
+              "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj"
+              "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj": {
+                "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -151,17 +159,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.27, )"
+              "version": "[6.0.28, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[6.0.27, )"
+              "version": "[6.0.28, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.27, )"
+              "version": "[6.0.28, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -195,21 +203,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
+    "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\obj\\",
+        "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -223,8 +235,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
+              "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -254,21 +266,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj": {
+    "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\obj\\",
+        "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -282,11 +298,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
+              "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj"
               },
-              "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Máy tính\\PRN211\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj"
+              "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -316,7 +332,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

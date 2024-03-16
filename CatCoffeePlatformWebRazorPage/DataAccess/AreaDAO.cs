@@ -286,5 +286,9 @@ namespace DataAccess
                 throw new Exception();
             }
         }
+        public Area CheckAreaEixst(string AreaName, int shopId, int accountId)
+        {
+            return _context.Areas.SingleOrDefault(p => p.AreaName.Equals(AreaName) && p.ShopId == shopId && p.AccountId == accountId);
+        }
     }
 }

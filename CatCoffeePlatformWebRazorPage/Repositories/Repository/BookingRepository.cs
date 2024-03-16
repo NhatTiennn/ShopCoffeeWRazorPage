@@ -36,5 +36,31 @@ namespace Repositories.Repository
         {
             BookingDAO.Instance.Update(newBooking);
         }
+        public Booking CheckBookingExist(Booking booking)
+        {
+            return BookingDAO.Instance.CheckBookingExist(booking);
+        }
+        public Booking GetBookingId(int bookingId)
+        {
+            return BookingDAO.Instance.GetBookingId(bookingId);
+        }
+
+        public Task<IList<Booking>> GetAllHistoryBookingByCustomerId(int accountId)
+        {
+            return BookingDAO.Instance.GetAllHistoryBookingByCustomerId(accountId);
+        }
+
+        public Task<IList<Booking>> GetAllHistoryBookingByShopId(int shopId)
+        {
+            return BookingDAO.Instance.GetAllHistoryBookingByShopId(shopId);
+        }
+
+        public Task<Booking> GetBookingByBookingId(int bookingId)
+        {
+           return BookingDAO.Instance.GetBookingByBookingId(bookingId);
+
+        }
+
+      
     }
 }

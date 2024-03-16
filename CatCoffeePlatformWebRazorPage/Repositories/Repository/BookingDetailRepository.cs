@@ -11,9 +11,9 @@ namespace Repositories.Repository
 {
     public class BookingDetailRepository : IBookingDetailRepository
     {
-        public void create(BookingDetail bookingDetail)
+        public void Create(BookingDetail bookingDetail)
         {
-            BookingDetailDAO.Instance.create(bookingDetail);
+            BookingDetailDAO.Instance.Create(bookingDetail);
         }
 
         public BookingDetail GetById(int foodCatId)
@@ -21,9 +21,39 @@ namespace Repositories.Repository
           return  BookingDetailDAO.Instance.GetById(foodCatId);
         }
 
-        public void update(BookingDetail bookingDetail)
+        public void Update(BookingDetail bookingDetail)
         {
-            BookingDetailDAO.Instance.update(bookingDetail);
+            BookingDetailDAO.Instance.Update(bookingDetail);
+        }
+
+        public List<BookingDetail> GetAllByBookingId(int bookingId)
+        {
+            return BookingDetailDAO.Instance.GetAllByBookingId(bookingId);
+        }
+
+        public async Task<double> GetSumDrinkByBookingIdAsync(int bookingId)
+        {
+          return await BookingDetailDAO.Instance.GetSumDrinkByBookingIdAsync(bookingId);
+        }
+
+        public async Task<double> GetSumFoodByBookingIdAsync(int bookingId)
+        { 
+           return await BookingDetailDAO.Instance.GetSumFoodByBookingIdAsync(bookingId);
+        }
+
+        public Task<IList<BookingDetail>> GetAllBookingDetailByBookingId(int bookingId)
+        {
+            return BookingDetailDAO.Instance.GetAllBookingDetailByBookingId(bookingId);
+        }
+
+        public Task<IList<BookingDetail>> GetAllBookingDetailDrinkByBookingId(int bookingId)
+        {
+            return BookingDetailDAO.Instance.GetAllBookingDetailDrinkByBookingId(bookingId);
+        }
+
+        public Task<IList<BookingDetail>> GetAllBookingDetailFoodByBookingId(int bookingId)
+        {
+            return BookingDetailDAO.Instance.GetAllBookingDetailFoodByBookingId(bookingId) ;
         }
     }
 }

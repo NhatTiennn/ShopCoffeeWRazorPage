@@ -22,13 +22,13 @@ namespace CatCoffeePlatformWebRazorPage.Pages.LoginPage
             this.roleRepository = roleRepository;
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPost()
         {
             if(!ModelState.IsValid)
             {
                 return Page();
             }
-            var account = accountRepository.GetByEmail(Email);
+            var account = await accountRepository.GetByEmail(Email);
             if(account != null)
             {
                 HttpContext.Session.SetString("Email", Email);

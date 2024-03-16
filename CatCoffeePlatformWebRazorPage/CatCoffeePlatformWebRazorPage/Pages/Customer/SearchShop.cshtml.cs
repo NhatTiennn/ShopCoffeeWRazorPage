@@ -32,10 +32,10 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
         public IList<CatType> CatTypes { get; set; }
         public Account customer { get; set; }
 
-        public IActionResult OnGet(string catTypeName)
+        public async Task<IActionResult> OnGet(string catTypeName)
         {
             int? accountId = httpContextAccessor.HttpContext.Session.GetInt32("AccountId");
-            customer = accountRepository.GetById(accountId);
+            customer = await accountRepository.GetById(accountId);
             SearchedShops = _shopCoffeeCatRepository.SearchShops(catTypeName);
            CatTypes = _catTypeRepository.GetAll();
             //return Redirect("/Customer/SearchShop");

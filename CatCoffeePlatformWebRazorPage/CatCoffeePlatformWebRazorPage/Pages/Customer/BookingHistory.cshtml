@@ -1,8 +1,6 @@
 ﻿@page
-@model CatCoffeePlatformWebRazorPage.Pages.Customer.SearchShopModel
-
+@model CatCoffeePlatformWebRazorPage.Pages.Customer.BookingHistoryModel
 @{
-    ViewData["Title"] = "SearchShop";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +49,11 @@
                     <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
                 </div>
                 <div class="top-link pe-2">
-@*                     <a asp-page="/Customer/BookingHistory" class="text-white"><small class="text-white mx-2">Booking History</small>/</a>
- *@                </div>
+                    @* <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                    *@
+                </div>
             </div>
         </div>
         <div class="container px-0">
@@ -63,6 +64,7 @@
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
+                       
                     </div>
                     <div class="d-flex m-3 me-0">
                         <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
@@ -111,125 +113,88 @@
     <!-- Modal Search End -->
     <!-- Single Page Header start -->
     <div class="container-fluid page-header py-5">
-        <h1 class="text-center text-white display-6">SearchShop</h1>
+        <h1 class="text-center text-white display-6">Booking History</h1>
         <ol class="breadcrumb justify-content-center mb-0">
-            <li class="breadcrumb-item"><a asp-page="./HomePage">Home</a></li>
-            <li class="breadcrumb-item active text-white">SearchShop</li>
+            <li class="breadcrumb-item"><a asp-page ="./HomePage">Home</a></li>
+            <li class="breadcrumb-item active text-white"><a asp-page="/Customer/BookingHistory">Booking History</a></li>
         </ol>
     </div>
     <!-- Single Page Header End -->
-    <!-- Fruits Shop Start-->
-    <div class="container-fluid fruite py-5">
+    <!-- Cart Page Start -->
+    <div class="container-fluid py-5">
         <div class="container py-5">
-            <h1 class="mb-4">Cat Coffee</h1>
-            <div class="row g-4">
-                <div class="col-lg-12">
-                    <div class="row g-4">
-                        <div class="col-xl-3">
-                            <div class="input-group w-100 mx-auto d-flex">
-                                <form method="get">
-                                    <input type="text" id="catTypeName" name="CatTypeName" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                                    <button type="submit" id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-6"></div>
-                        <div class="col-xl-3">
-                            <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
-                                <!-- <label for="fruits">Default Sorting:</label>
-                                <select id="fruits" name="fruitlist" class="border-0 form-select-sm bg-light me-3" form="fruitform">
-                                    <option value="volvo">Nothing</option>
-                                    <option value="saab">Popularity</option>
-                                    <option value="opel">Organic</option>
-                                    <option value="audi">Fantastic</option>
-                                </select> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-lg-3">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="mb-3">
-                                        <h4>Cat categories</h4>
-                                        @foreach (var item in Model.CatTypes)
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Shop Name</th>
+                            <th scope="col">Date Book</th>
+                            <th scope="col">Slot</th>
+                            <th scope="col">Table</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Booking)
+                        {
+                            <tr>
+                                <td scope="row">
+                                    <div class="d-flex align-items-center">
+                                        <img src="img/vegetable-item-3.png" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-5">@Html.DisplayFor(modelItem => item.Shop.ShopName)</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-5"> @String.Format("{0:dd-MM-yyyy}", item.BookingDate)</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-5">
+                                        @Html.DisplayFor(modelItem => item.Slot.StartTime) -
+                                        @Html.DisplayFor(modelItem => item.Slot.EndTime)
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-5">@Html.DisplayFor(modelItem => item.Table.TableName)</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-5">@Html.DisplayFor(modelItem => item.Total)</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-5">
+                                        @if (item.Status)
                                         {
-                                    <ul class="list-unstyled fruite-categorie">
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                    <a asp-page="./SearchShop" asp-route-CatTypeName="@item.CatTypeName"><i class="fas fa-paw me-2"></i>@Html.DisplayFor(modelItem => item.CatTypeName)</a>
-                                                        @* <span></span> *@
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            <span class="text-black">booked</span>
                                         }
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12">
-                                    <div class="position-relative">
-                                        <img src="/img/banner-fruits.jpg" class="img-fluid w-100 rounded" alt="">
-                                        <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
-                                            <h3 class="text-secondary fw-bold">Cat <br> Coffee <br> Platform</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-md-6 col-lg-6 col-xl-4">
-                                    @if (Model.SearchedShops != null && Model.SearchedShops.Count > 0)
-                                    {
-                                        @foreach (var item in Model.SearchedShops)
+                                        else
                                         {
-                                            <a asp-page="./ShopDetails" asp-route-id="@item.ShopId">
-                                                <div class="rounded position-relative fruite-item">
-                                                    <div class="fruite-img">
-                                                        <img src="/img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                    </div>
-                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                        <h4>
-                                                            <a asp-page="./ShopDetails" asp-route-id="@item.ShopId">@Html.DisplayFor(modelItem => item.ShopName)</a>
-                                                        </h4>
-                                                        <p>
-                                                            Start Time: @Html.DisplayFor(modelItem => item.StartTime)
-                                                            End Time: @Html.DisplayFor(modelItem => item.EndTime)
-                                                        </p>
-                                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                                            <a asp-page="./ShopDetails" asp-route-id="@item.ShopId" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> View shop</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
+                                            <span class="text-danger">cancel</span>
                                         }
-                                    }
-                                    else
-                                    {
-                                        <p>No shops found with the specified Cat Type.</p>
-                                    }
-                                </div>
-                                <div class="col-12">
-                                    <div class="pagination d-flex justify-content-center mt-5">
-                                        <a href="#" class="rounded">&laquo;</a>
-                                        <a href="#" class="active rounded">1</a>
-                                        <a href="#" class="rounded">2</a>
-                                        <a href="#" class="rounded">3</a>
-                                        <a href="#" class="rounded">4</a>
-                                        <a href="#" class="rounded">5</a>
-                                        <a href="#" class="rounded">6</a>
-                                        <a href="#" class="rounded">&raquo;</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                    </p>
+                                </td>
+                                <td>
+                                    <form method="post">
+                                        <input type="hidden" name="bookingId" value="@item.BookingId" />
+                                        <a asp-page="/Customer/BookingDetailPage" asp-route-id="@item.BookingId" class="btn btn-md rounded-circle bg-light border mt-4">
+                                            <i class="fa fa-eye text-dark"></i>
+                                         </a>
+                                        <button type="submit" asp-route-id="@item.BookingId" class="btn btn-md rounded-circle bg-light border mt-4">
+                                            <i class="fa fa-times text-danger"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <!-- Fruits Shop End-->
+    <!-- Cart Page End -->
     <!-- Footer Start -->
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
@@ -334,7 +299,5 @@
     <!-- Template Javascript -->
     <script src="/js/main.js"></script>
 </body>
-
-
 
 </html>
