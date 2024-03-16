@@ -10,7 +10,10 @@ namespace BusinessObject.Models
         public int? FoodCatId { get; set; }
         public int? DrinkId { get; set; }
         public int? NumberOfDrink { get; set; }
+        public double? TotalPriceDrink { get; set; }
         public int? NumberOfFoodCat { get; set; }
+        public double? TotalPriceFood { get; set; }
+
 
         public virtual Booking Booking { get; set; } = null!;
         public virtual Drink? Drink { get; set; }

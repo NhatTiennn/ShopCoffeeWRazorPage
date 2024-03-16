@@ -1,4 +1,5 @@
-﻿using BusinessObject.Models;
+﻿using BusinessObject.DTO;
+using BusinessObject.Models;
 using DataAccess;
 using Repositories.IRepository;
 using System;
@@ -24,6 +25,16 @@ namespace Repositories.Repository
         public SlotBooking GetSlotByShopId(int slotId, int shopId)
         {
             return SlotBookingDAO.Instance.GetSlotByShopId(shopId, slotId);
+        }
+
+        public List<SlotInformation> GetByShopId(int shopId)
+        {
+            return SlotBookingDAO.Instance.GetByShopId(shopId);
+        }
+
+        public SlotBooking GetShopByStartTime(string startTime, int value)
+        {
+            return SlotBookingDAO.Instance.GetShopByStartTime(startTime, value);
         }
     }
 }

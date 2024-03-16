@@ -1,4 +1,5 @@
-﻿using BusinessObject.Models;
+﻿using BusinessObject.DTO;
+using BusinessObject.Models;
 using Repositories.Repository;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace Repositories.IRepository
         List<ShopCoffeeCat> GetTop10Shops();
 
         void CreateShopCoffee(ShopCoffeeCat request);
+
 
     }
 }

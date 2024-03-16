@@ -1,8 +1,6 @@
 ﻿@page
-@model CatCoffeePlatformWebRazorPage.Pages.Customer.SearchShopModel
-
+@model CatCoffeePlatformWebRazorPage.Pages.Customer.BookingPageModel
 @{
-    ViewData["Title"] = "SearchShop";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +49,11 @@
                     <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">Email@Example.com</a></small>
                 </div>
                 <div class="top-link pe-2">
-@*                     <a asp-page="/Customer/BookingHistory" class="text-white"><small class="text-white mx-2">Booking History</small>/</a>
- *@                </div>
+                    @* <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small>/</a>
+                    <a href="#" class="text-white"><small class="text-white ms-2">Sales and Refunds</small></a>
+                    *@
+                </div>
             </div>
         </div>
         <div class="container px-0">
@@ -63,6 +64,7 @@
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                     <div class="navbar-nav mx-auto">
+                        
                     </div>
                     <div class="d-flex m-3 me-0">
                         <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
@@ -111,125 +113,159 @@
     <!-- Modal Search End -->
     <!-- Single Page Header start -->
     <div class="container-fluid page-header py-5">
-        <h1 class="text-center text-white display-6">SearchShop</h1>
+        <h1 class="text-center text-white display-6">Booking Page</h1>
         <ol class="breadcrumb justify-content-center mb-0">
             <li class="breadcrumb-item"><a asp-page="./HomePage">Home</a></li>
-            <li class="breadcrumb-item active text-white">SearchShop</li>
+            <li class="breadcrumb-item">Shop Detail</li>
+            <li class="breadcrumb-item active text-white">Booking Page</li>
         </ol>
     </div>
     <!-- Single Page Header End -->
-    <!-- Fruits Shop Start-->
-    <div class="container-fluid fruite py-5">
+    <!-- Checkout Page Start -->
+    <div class="container-fluid py-5">
+        <h1 class="mb-4">Let's Booking</h1>
         <div class="container py-5">
-            <h1 class="mb-4">Cat Coffee</h1>
-            <div class="row g-4">
-                <div class="col-lg-12">
-                    <div class="row g-4">
-                        <div class="col-xl-3">
-                            <div class="input-group w-100 mx-auto d-flex">
-                                <form method="get">
-                                    <input type="text" id="catTypeName" name="CatTypeName" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
-                                    <button type="submit" id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-6"></div>
-                        <div class="col-xl-3">
-                            <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between mb-4">
-                                <!-- <label for="fruits">Default Sorting:</label>
-                                <select id="fruits" name="fruitlist" class="border-0 form-select-sm bg-light me-3" form="fruitform">
-                                    <option value="volvo">Nothing</option>
-                                    <option value="saab">Popularity</option>
-                                    <option value="opel">Organic</option>
-                                    <option value="audi">Fantastic</option>
-                                </select> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-lg-3">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="mb-3">
-                                        <h4>Cat categories</h4>
-                                        @foreach (var item in Model.CatTypes)
-                                        {
-                                    <ul class="list-unstyled fruite-categorie">
-                                        <li>
-                                            <div class="d-flex justify-content-between fruite-name">
-                                                    <a asp-page="./SearchShop" asp-route-CatTypeName="@item.CatTypeName"><i class="fas fa-paw me-2"></i>@Html.DisplayFor(modelItem => item.CatTypeName)</a>
-                                                        @* <span></span> *@
-                                            </div>
-                                        </li>
-                                    </ul>
-                                        }
-                                    </div>
-                                </div>
 
-                                <div class="col-lg-12">
-                                    <div class="position-relative">
-                                        <img src="/img/banner-fruits.jpg" class="img-fluid w-100 rounded" alt="">
-                                        <div class="position-absolute" style="top: 50%; right: 10px; transform: translateY(-50%);">
-                                            <h3 class="text-secondary fw-bold">Cat <br> Coffee <br> Platform</h3>
-                                        </div>
-                                    </div>
-                                </div>
+            <form method="post">
+                <div class="row g-5">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="form-item w-100">
+                                <label asp-for="AreaName" class="form-label my-3">Select Area<sup>*</sup></label>
+                                <select asp-for="AreaName" asp-items="ViewBag.AreaName" class="form-control"></select>
                             </div>
                         </div>
-                        <div class="col-lg-9">
-                            <div class="row g-4 justify-content-center">
-                                <div class="col-md-6 col-lg-6 col-xl-4">
-                                    @if (Model.SearchedShops != null && Model.SearchedShops.Count > 0)
-                                    {
-                                        @foreach (var item in Model.SearchedShops)
-                                        {
-                                            <a asp-page="./ShopDetails" asp-route-id="@item.ShopId">
-                                                <div class="rounded position-relative fruite-item">
-                                                    <div class="fruite-img">
-                                                        <img src="/img/fruite-item-5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                    </div>
-                                                    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
-                                                    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                        <h4>
-                                                            <a asp-page="./ShopDetails" asp-route-id="@item.ShopId">@Html.DisplayFor(modelItem => item.ShopName)</a>
-                                                        </h4>
-                                                        <p>
-                                                            Start Time: @Html.DisplayFor(modelItem => item.StartTime)
-                                                            End Time: @Html.DisplayFor(modelItem => item.EndTime)
-                                                        </p>
-                                                        <div class="d-flex justify-content-between flex-lg-wrap">
-                                                            <a asp-page="./ShopDetails" asp-route-id="@item.ShopId" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> View shop</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        }
-                                    }
-                                    else
-                                    {
-                                        <p>No shops found with the specified Cat Type.</p>
-                                    }
-                                </div>
-                                <div class="col-12">
-                                    <div class="pagination d-flex justify-content-center mt-5">
-                                        <a href="#" class="rounded">&laquo;</a>
-                                        <a href="#" class="active rounded">1</a>
-                                        <a href="#" class="rounded">2</a>
-                                        <a href="#" class="rounded">3</a>
-                                        <a href="#" class="rounded">4</a>
-                                        <a href="#" class="rounded">5</a>
-                                        <a href="#" class="rounded">6</a>
-                                        <a href="#" class="rounded">&raquo;</a>
-                                    </div>
-                                </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="form-item w-100">
+                                <label asp-for="StartEndTime" class="form-label my-3">Select Slot<sup>*</sup></label>
+                                <select asp-for="StartEndTime" class="form-control" asp-items="ViewBag.StartEndTime"></select>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="form-item w-100">
+                                <label asp-for="TableName" class="form-label my-3">Select Table<sup>*</sup></label>
+                                <select asp-for="TableName" class="form-control" asp-items="ViewBag.TableName"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <div class="form-item w-100">
+                                <label asp-for="BookingDate" class="form-label my-3">Date Come<sup>*</sup></label>
+                                <input asp-for="BookingDate" type="date" class="form-control">
+                                <span asp-validation-for="BookingDate" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-6">
+                        <div class="table-responsive">
+                            <p>Choose Drink</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Drink Image</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                     @for (int i = 0; i < Model.drinks.Count; i++)
+                    {
+                                    <tr>
+                                            <input asp-for="@Model.drinks[i].DrinkId" class="form-control" type="hidden" />
+                                        <th scope="row">
+                                            <div class="d-flex align-items-center">
+                                                <img src="/img/vegetable-item-3.png" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
+                                            </div>
+                                        </th>
+                                        <td>
+                                                <p class="mb-0 mt-4" asp-for="@Model.drinks[i].DrinkName">@Model.drinks[i].DrinkName</p>
+                                        </td>
+                                        <td>
+                                                <input class="mb-0 mt-4" asp-for="@Model.drinks[i].Price" type="hidden">
+                                                <p class="mb-0 mt-4" asp-for="@Model.drinks[i].Price">@Model.drinks[i].Price</p>
+                                        </td>
+                                        <td>
+                                            <div class="input-group quantity mt-4" style="width: 100px;">
+                                                @* <div class="input-group-btn">
+                                                    <button class="btn btn-sm btn-minus rounded-circle bg-light border">
+                                                        <i class="fa fa-minus"></i>
+                                                    </button>
+                                                </div> *@
+                                                    <input type="number" asp-for="@Model.drinks[i].numberOfDrink" class="form-control form-control-sm text-center border-0" value="0">
+                                                @* <div class="input-group-btn">
+                                                    <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </div> *@
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-6">
+                        <div class="table-responsive">
+                            <p>Choose Food Cat</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Food Cat Image</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                     @for (int i = 0; i < Model.foodForCats.Count; i++)
+                    {
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="d-flex align-items-center">
+                                                <img src="/mg/vegetable-item-3.png" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
+                                            </div>
+                                        </th>
+                                            <input asp-for="@Model.foodForCats[i].FoodCatId" class="form-control" type="hidden" />
+                                        <td>
+                                                <p class="mb-0 mt-4" asp-for="@Model.foodForCats[i].FoodCatName">@Model.foodForCats[i].FoodCatName</p>
+                                        </td>
+                                        <td>
+                                                <input class="mb-0 mt-4" asp-for="@Model.foodForCats[i].FoodPrice" type="hidden">
+                                                <p class="mb-0 mt-4" asp-for="@Model.foodForCats[i].FoodPrice">@Model.foodForCats[i].FoodPrice</p>
+                                        </td>
+                                        <td>
+                                            <div class="input-group quantity mt-4" style="width: 100px;">
+                                               @*  <div class="input-group-btn">
+                                                    <button class="btn btn-sm btn-minus rounded-circle bg-light border">
+                                                        <i class="fa fa-minus"></i>
+                                                    </button>
+                                                </div> *@ 
+                                                    <input type="number" asp-for="@Model.foodForCats[i].numberOfFood" class="form-control form-control-sm text-center border-0" value="0">
+                                               @*  <div class="input-group-btn">
+                                                    <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </div> *@
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                            <Input type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary" value="Place Order">
+                        </div>
+                        </div>
+                        </div>
+            </form>
         </div>
     </div>
-    <!-- Fruits Shop End-->
+
+    <!-- Checkout Page End -->
     <!-- Footer Start -->
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
@@ -335,6 +371,10 @@
     <script src="/js/main.js"></script>
 </body>
 
-
-
 </html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

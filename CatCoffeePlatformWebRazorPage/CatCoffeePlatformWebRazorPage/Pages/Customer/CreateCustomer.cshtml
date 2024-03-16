@@ -4,16 +4,47 @@
 @{
     ViewData["Title"] = "CreateCustomer";
 }
-
-<h1>CreateCustomer</h1>
-
-<h4>Account</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="/css/login/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/login/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css//login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css//login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css//login/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css//login/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css//login/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css//login/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css//login/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css//login/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/css//login/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(/css/login/images/bg-01.jpg);">
+                    <span class="login100-form-title-1">
+                        Sign Up
+                    </span>
+                </div>
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
                 <label asp-for="Account.RoleId" class="control-label"></label>
                 <select asp-for="Account.RoleId" class ="form-control" asp-items="ViewBag.RoleId"></select>
             </div>
@@ -59,10 +90,22 @@
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
+    <!--===============================================================================================-->
+    <script src="/css//login/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/css//login/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/css//login/vendor/bootstrap/js/popper.js"></script>
+    <script src="/css//login/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/css//login/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/css//login/vendor/daterangepicker/moment.min.js"></script>
+    <script src="/css//login/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="/css//login/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="/css//login/js/main.js"></script>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+</body>
+</html>

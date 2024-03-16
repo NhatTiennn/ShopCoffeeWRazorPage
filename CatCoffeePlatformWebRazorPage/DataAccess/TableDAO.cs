@@ -38,5 +38,14 @@ namespace DataAccess
         {
             return _context.Tables.Where(p => p.ShopId == shopId).ToList();
         }
+
+        public List<Table> GetByShopId(int shopId)
+        {
+            return _context.Tables.Where(p => p.ShopId == shopId).ToList();
+        }
+        public Table GetByTableName(string tableName, int shopId)
+        {
+            return _context.Tables.SingleOrDefault(p => p.TableName.Equals(tableName) && p.ShopId == shopId);
+        }
     }
 }

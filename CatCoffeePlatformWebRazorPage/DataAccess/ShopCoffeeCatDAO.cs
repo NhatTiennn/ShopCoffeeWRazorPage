@@ -63,7 +63,18 @@ namespace DataAccess
                         join cat in _context.Cats on shop.ShopId equals cat.ShopId
                         join catType in _context.CatTypes on cat.CatTypeId equals catType.CatTypeId
                         where shop.ShopId == id
-                        select cat).ToList();
+                        select new Cat
+                        {
+                            CatId = cat.CatId,
+                            CatName = cat.CatName,
+                            CatInfo = cat.CatInfo,
+                            ImageCat = cat.ImageCat,
+                            CatType = new CatType
+                            {
+                                CatTypeId = catType.CatTypeId,
+                                CatTypeName = catType.CatTypeName
+                            }
+                        }).ToList();
 
             return cats;
         }

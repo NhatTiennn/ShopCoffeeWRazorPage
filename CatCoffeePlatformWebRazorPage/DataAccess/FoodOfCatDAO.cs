@@ -1,4 +1,5 @@
-﻿using BusinessObject.Models;
+﻿using BusinessObject.DTO;
+using BusinessObject.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -52,5 +53,44 @@ namespace DataAccess
             _context.FoodForCats.Add(request);
             await _context.SaveChangesAsync();
         }
+
+        public List<BookingDetailInformation> GetByShopId(int shopId)
+        {
+            var listFood = _context.FoodForCats.Where(p => p.ShopId == shopId).ToList();
+            List<BookingDetailInformation> list = new List<BookingDetailInformation>();
+            foreach (var food in listFood)
+            {
+                list.Add(new BookingDetailInformation()
+                {
+                    foodCatAndPrice = food.FoodCatName + "-" + "Price :" + food.FoodPrice.ToString()
+                });
+            }
+            return list;
+        }
+        public FoodForCat GetByFoodName(string foodName, int shopId)
+        {
+            return _context.FoodForCats.SingleOrDefault(p => p.FoodCatName.Equals(foodName) && p.ShopId == shopId);
+        }
+        public List<FoodCatInfor> GetAllByShopId(int shopId)
+        {
+            var list = _context.FoodForCats.Where(p => p.ShopId == shopId).ToList();
+            List<FoodCatInfor> listFood = new List<FoodCatInfor>();
+            foreach (var food in list)
+            {
+                listFood.Add(new FoodCatInfor
+                {
+                    FoodCatId = food.FoodCatId,
+                    ShopId = food.ShopId,
+                    FoodCatName = food.FoodCatName,
+                    FoodCatInfo = food.FoodCatInfo,
+                    FoodPrice = food.FoodPrice,
+                    ImageFoodForCat = food.ImageFoodForCat,
+                    numberOfFood = 0,
+                    Status = food.Status
+                });
+            }
+            return listFood;
+        }
+
     }
 }

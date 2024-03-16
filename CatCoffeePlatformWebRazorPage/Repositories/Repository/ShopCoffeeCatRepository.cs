@@ -21,6 +21,7 @@ namespace Repositories.Repository
             return ShopCoffeeCatDAO.Instance.GetAll();
         }
 
+
         public ShopCoffeeCat GetById(int? id)
         {
             return ShopCoffeeCatDAO.Instance.GetById(id);

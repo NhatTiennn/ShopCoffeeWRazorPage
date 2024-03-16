@@ -69,3 +69,18 @@ C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatform
 C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
 C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
 C:\Users\ADMIN\OneDrive\Máy tính\PRN211\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\bin\Debug\net6.0\BusinessObject.dll
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\bin\Debug\net6.0\BusinessObject.pdb
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.AssemblyReference.cache
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfoInputs.cache
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfo.cs
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.CoreCompileInputs.cache
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.sourcelink.json
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.dll
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\refint\BusinessObject.dll
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
+D:\PRN221\NEW_PRN\ShopCoffeeWRazorPage\CatCoffeePlatformWebRazorPage\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll

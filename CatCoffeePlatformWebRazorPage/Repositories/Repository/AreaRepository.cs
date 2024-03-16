@@ -67,5 +67,9 @@ namespace Repositories.Repository
         {
             return await AreaDAO.Instance.IsAreaNameExist(areaName,  shopId,  areaId);
         }
+        public Area CheckAreaEixst(string AreaName, int shopId, int accountId)
+        {
+            return AreaDAO.Instance.CheckAreaEixst(AreaName, shopId, accountId);
+        }
     }
 }

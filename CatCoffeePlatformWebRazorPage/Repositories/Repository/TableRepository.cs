@@ -21,5 +21,14 @@ namespace Repositories.Repository
         {
             return TableDAO.Instance.GetTableByShopId( shopId);
         }
+        public List<Table> GetByShopId(int shopId)
+        {
+            return TableDAO.Instance.GetByShopId(shopId);
+        }
+
+        public Table GetByTableName(string tableName, int shopId)
+        {
+            return TableDAO.Instance.GetByTableName(tableName, shopId);
+        }
     }
 }

@@ -85,16 +85,26 @@ namespace DataAccess
         {
             try
             {
-                var checkUser = GetRatingByUser(request.AccountId, request.ShopId);
-                if (checkUser == null)
+                var checkBooking = _context.Bookings.Where(c => c.AccountId == request.AccountId && c.ShopId == request.ShopId).FirstOrDefault();
+                if (checkBooking != null)
                 {
-                    _context.Ratings.Add(request);
-                    await _context.SaveChangesAsync();
-                }
-                else
-                {
-                    _context.Ratings.Update(request);
-                    await _context.SaveChangesAsync();
+                    var checkUser = GetRatingByUser(request.AccountId, request.ShopId);
+                    if (checkUser == null)
+                    {
+                        _context.Ratings.Add(request);
+                        await _context.SaveChangesAsync();
+                    }
+                    else
+                    {
+                        Rating rate = _context.Ratings.Where(c => c.AccountId == request.AccountId && c.ShopId == request.ShopId).FirstOrDefault();
+                        rate.RateNumber = request.RateNumber;
+                        rate.ShopId = request.ShopId;
+                        rate.AccountId = request.AccountId;
+                        rate.Status = true;
+                        rate.RateId = request.RateId;
+                        _context.Ratings.Update(rate);
+                        await _context.SaveChangesAsync();
+                    }
                 }
                 return request;
             }

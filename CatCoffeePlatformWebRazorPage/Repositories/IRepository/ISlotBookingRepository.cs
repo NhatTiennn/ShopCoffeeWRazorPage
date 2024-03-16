@@ -1,4 +1,5 @@
-﻿using BusinessObject.Models;
+﻿using BusinessObject.DTO;
+using BusinessObject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace Repositories.IRepository
         public SlotBooking GetById(int slotId);
         public List<SlotBooking> GetSlotByShopId(int shopId);
         public SlotBooking GetSlotByShopId(int slotId, int shopId);
-
+        public SlotBooking GetShopByStartTime(string startTime, int value);
+        public List<SlotInformation> GetByShopId(int shopId);
 
     }
 }

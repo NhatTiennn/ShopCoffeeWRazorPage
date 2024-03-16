@@ -202,6 +202,8 @@ namespace BusinessObject.Models
                 entity.Property(e => e.NumberOfDrink).HasColumnName("numberOfDrink");
 
                 entity.Property(e => e.NumberOfFoodCat).HasColumnName("numberOfFoodCat");
+                entity.Property(e => e.TotalPriceFood).HasColumnName("TotalPriceFood");
+                entity.Property(e => e.TotalPriceDrink).HasColumnName("TotalPriceDrink");
 
                 entity.HasOne(d => d.Booking)
                     .WithMany(p => p.BookingDetails)
