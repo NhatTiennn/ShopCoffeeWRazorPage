@@ -12,19 +12,26 @@ namespace Repositories.Repository
 {
     public class AccountRepository : IAccountRepository
     {
-        public void createAccount(Account account)
+        public async void createAccount(Account account)
         {
             AccountDAO.Instance.createAccount(account);
         }
 
-        public Account GetByEmail(string email)
+       
+
+        public async Task<Account> GetByEmail(string email)
         {
-            return AccountDAO.Instance.GetAccountByemail(email);
+            return await AccountDAO.Instance.GetAccountByemail(email);
         }
 
-        public Account GetById(int? id)
+        public async Task<Account> GetById(int? id)
         {
-            return AccountDAO.Instance.GetById(id);
+            return await AccountDAO.Instance.GetById(id);
+        }
+
+        public async void UpdateAcount(Account request)
+        {
+            AccountDAO.Instance.UpdateAcount(request);
         }
 
         public async Task<Account> CreateAccount(Account cat)
