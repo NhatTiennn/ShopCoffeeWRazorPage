@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {}
+    "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\My PC\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\NEW_PRN\\ShopCoffeeWRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\obj\\",
+        "projectPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\phamt\\.nuget\\packages\\",
+        "outputPath": "C:\\JavaCode\\C#\\C#-WEB\\CatCoffeePlatformWebRazorPage\\CatCoffeePlatformWebRazorPage\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\My PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\phamt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
