@@ -11,10 +11,10 @@ namespace Repositories.IRepository
 {
     public interface IAccountRepository
     {
-        public Account GetByEmail(string email);
+        Task<Account> GetByEmail(string email);
         public void createAccount(Account account);
 
-        Account GetById(int? id);
+        Task<Account> GetById(int? id);
 
         Task<IList<Account>> GetAllAccounts();
 
