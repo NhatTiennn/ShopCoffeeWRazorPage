@@ -31,7 +31,7 @@ namespace Repositories.Repository
 
         public async void UpdateAcount(Account request)
         {
-            AccountDAO.Instance.UpdateAcount(request);
+            AccountDAO.Instance.UpdateAccount(request);
         }
 
         public async Task<Account> CreateAccount(Account cat)

@@ -28,9 +28,9 @@ namespace DataAccess
                 return instance;
             }
         }
-        public Account GetAccountByemail(string email)
+        public async Task<Account> GetAccountByemail(string email)
         {
-            return _context.Accounts.SingleOrDefault(p => p.Email.Equals(email));
+            return await _context.Accounts.SingleOrDefaultAsync(p => p.Email.Equals(email));
 
         }
         public void createAccount(Account account)
@@ -39,9 +39,9 @@ namespace DataAccess
             _context.SaveChanges();
         }
 
-        public Account GetById(int? id)
+        public async Task<Account> GetById(int? id)
         {
-            return _context.Accounts.SingleOrDefault(p => p.AccountId.Equals(id));
+            return await _context.Accounts.FirstOrDefaultAsync(p => p.AccountId.Equals(id));
         }
 
         public async Task<IList<Account>> GetAllAccounts()
