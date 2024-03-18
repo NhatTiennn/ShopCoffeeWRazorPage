@@ -11,6 +11,11 @@ namespace Repositories.Repository
 {
     public class ShopCoffeeCatRepository : IShopCoffeeCatRepository
     {
+        public Task<ShopCoffeeCat> ChangeStatusByAdmin(int shopId, int roleId)
+        {
+            return ShopCoffeeCatDAO.Instance.ChangeStatusByAdmin(shopId, roleId);
+        }
+
         public void CreateShopCoffee(ShopCoffeeCat request)
         {
             ShopCoffeeCatDAO.Instance.CreateShopCoffee(request);

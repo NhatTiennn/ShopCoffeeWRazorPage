@@ -1,10 +1,12 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Constants;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DataAccess.Constants.Constant;
 
 namespace DataAccess
 {
@@ -101,6 +103,33 @@ namespace DataAccess
         {
             _context.ShopCoffeeCats.Add(request);
             _context.SaveChanges();
+        }
+
+        public async Task<IList<ShopCoffeeCat>> ManagerShopByAdmin(int roleId)
+        {
+            if(roleId == Constant.Role.ADMIN)
+            {
+                IList<ShopCoffeeCat> list = GetAll();
+                return list;
+            }
+
+            return null;
+        }
+
+        public async Task<ShopCoffeeCat> ChangeStatusByAdmin(int shopId, int roleId)
+        {
+            if (roleId == Constant.Role.ADMIN)
+            {
+                var getOneShop = await _context.ShopCoffeeCats.FirstOrDefaultAsync(x => x.ShopId == shopId);
+                if (getOneShop != null)
+                {
+                    getOneShop.Status = false;
+                    await _context.SaveChangesAsync();
+                    return getOneShop;
+                }
+                return null;
+            }
+            return null;
         }
     }
 }

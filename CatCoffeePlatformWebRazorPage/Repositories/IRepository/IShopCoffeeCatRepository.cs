@@ -25,6 +25,6 @@ namespace Repositories.IRepository
 
         void CreateShopCoffee(ShopCoffeeCat request);
 
-
+        Task<ShopCoffeeCat> ChangeStatusByAdmin(int shopId, int roleId);        
     }
 }
