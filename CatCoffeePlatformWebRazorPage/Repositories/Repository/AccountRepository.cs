@@ -17,8 +17,6 @@ namespace Repositories.Repository
             AccountDAO.Instance.createAccount(account);
         }
 
-       
-
         public async Task<Account> GetByEmail(string email)
         {
             return await AccountDAO.Instance.GetAccountByemail(email);
