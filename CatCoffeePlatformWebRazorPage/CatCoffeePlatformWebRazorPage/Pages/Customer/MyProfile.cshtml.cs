@@ -66,7 +66,7 @@ namespace CatCoffeePlatformWebRazorPage.Pages.Customer
             accountToUpdate.Dob = Account.Dob;
             accountToUpdate.Status = true;
 
-             accountRepository.UpdateAcount(accountToUpdate);
+             accountRepository.UpdateAccount(accountToUpdate);
 
             return Redirect("/Customer/MyProfile?id=" + id);
             }

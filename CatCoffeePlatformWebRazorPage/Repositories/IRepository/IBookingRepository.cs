@@ -22,6 +22,6 @@ namespace Repositories.IRepository
         Task<IList<Booking>> GetAllHistoryBookingByCustomerId(int accountId);
         Task<IList<Booking>> GetAllHistoryBookingByShopId(int shopId);
 
-
+        void TotalRevenue(int shopId);
     }
 }
