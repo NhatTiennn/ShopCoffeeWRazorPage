@@ -73,3 +73,15 @@ C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPag
 C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfoInputs.cache
 C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfo.cs
 C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.csproj.CoreCompileInputs.cache
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\Repositories.deps.json
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\Repositories.dll
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\Repositories.pdb
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\BusinessObject.dll
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\DataAccess.dll
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\BusinessObject.pdb
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\bin\Debug\net6.0\DataAccess.pdb
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.csproj.CopyComplete
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.dll
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\refint\Repositories.dll
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\Repositories.pdb
+C:\JavaCode\C#\C#-WEB\CatCoffeePlatformWebRazorPage\CatCoffeePlatformWebRazorPage\Repositories\obj\Debug\net6.0\ref\Repositories.dll

@@ -24,5 +24,6 @@ namespace Repositories.IRepository
 
         Task<AreaInformation> GetAreaInforById(int? id);
         Task<bool> IsAreaNameExist(string areaName, int shopId, int areaId);
+        Area CheckAreaEixst(string AreaName, int shopId, int accountId);
     }
 }

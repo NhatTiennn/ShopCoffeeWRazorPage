@@ -220,5 +220,15 @@ namespace DataAccess
 
             return books;
         }
+
+        public void TotalRevenue(int shopId)
+        {
+            var getOneShop = GetAll().Where(x => x.ShopId == shopId)
+                .GroupBy(x => x.BookingDate.Month)
+                .Select(x => new
+                {
+                    totalMoney = x.Sum(x => x.price)
+                });
+        }
     }
 }

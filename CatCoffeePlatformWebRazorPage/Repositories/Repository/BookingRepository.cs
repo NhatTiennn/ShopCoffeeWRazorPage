@@ -61,6 +61,9 @@ namespace Repositories.Repository
 
         }
 
-      
+        public void TotalRevenue(int shopId)
+        {
+            BookingDAO.Instance.TotalRevenue(shopId);
+        }
     }
 }
